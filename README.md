@@ -1,10 +1,13 @@
 ## rclone - rsync for cloud storage
 Rclone is a command line programme to sync files and directories.
 
+## Permissions
+chmod a+x docker-entrypoint.sh
+
 ## Docker build
 
 docker build \
---build-args VERSION=v1.50.0 \
+ --build-args VERSION=v1.50.0 \
 -- build-args ARCH=amd64
 -t rclonesync \
 .
