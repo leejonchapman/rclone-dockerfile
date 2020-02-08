@@ -17,4 +17,9 @@ FROM base
 RUN apk -U add ca-certificates && rm -rf /var/cache/apk/*
 COPY --from=builder /usr/bin/rclone /usr/bin/rclone
 
-ENTRYPOINT ["/usr/bin/rclone"]
+#Define mountable directories.
+VOLUME ["/config"]
+VOLUME ["/media"]
+
+# Move default config location
+ENTRYPOINT ["sh", "-c", "/usr/bin/rclone --config=/config/rclone.conf"]
