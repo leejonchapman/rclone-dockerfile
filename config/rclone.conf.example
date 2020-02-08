@@ -1,0 +1,30 @@
+[gdrive]
+type = drive
+client_id = 9812619862124-kjsadfkjasdflkjashdfkljashfkadjh.apps.googleusercontent.com
+client_secret = KaJadHasdGAqafhKJUoakaGs
+scope = drive
+hdlkahsdlkhiuhgsiKJHSA_jkasdkjhaskjha_qe","expiry":"2018-06-14T10:13:20.424623462Z"}
+team_drive = 0AaskdjhasKJGaskjdh
+
+[gcache]
+type = cache
+remote = gdrive:
+chunk_size = 5M
+info_age = 1d
+chunk_total_size = 1G
+
+[gcache-crypt]
+type = crypt
+remote = gcache:
+filename_encryption = standard
+directory_name_encryption = true
+password = lakldhfkuhaehadf7hkajdfhl29hrkljhasd9hDFKHASEDFMN.O3RNDLF8ADFLK3LIHslhD97HFADONLKLNkjHkljhlkjhfknadofadflkjqlkasd
+password2 = adlkfhadflakhdf98had87hih&HKjhaslhsadkjgo8gi7KJlkjglgfG&aslkdhlkjgkljGLKJGSADkjhlkhasdlkhasd
+
+[gdrive-crypt]
+type = crypt
+remote = gdrive:
+filename_encryption = standard
+directory_name_encryption = true
+password = lakldhfkuhaehadf7hkajdfhl29hrkljhasd9hDFKHASEDFMN.O3RNDLF8ADFLK3LIHslhD97HFADONLKLNkjHkljhlkjhfknadofadflkjqlkasd
+password2 = adlkfhadflakhdf98had87hih&HKjhaslhsadkjgo8gi7KJlkjglgfG&aslkdhlkjgkljGLKJGSADkjhlkhasdlkhasd

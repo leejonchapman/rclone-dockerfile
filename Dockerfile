@@ -1,4 +1,4 @@
-FROM alpine:3.8 as base
+FROM alpine:latest as base
 
 FROM base as builder
 ARG VERSION
@@ -22,4 +22,4 @@ VOLUME ["/config"]
 VOLUME ["/media"]
 
 # Move default config location
-ENTRYPOINT ["sh", "-c", "/usr/bin/rclone --config=/config/rclone.conf"]
+ENTRYPOINT ["sh", "-c", "/usr/bin/rclone --config=/config/rclone.conf version"]
