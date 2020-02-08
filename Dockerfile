@@ -21,5 +21,6 @@ COPY --from=builder /usr/bin/rclone /usr/bin/rclone
 VOLUME ["/config"]
 VOLUME ["/media"]
 
-# Move default config location
-ENTRYPOINT ["sh", "-c", "/usr/bin/rclone --config=/config/rclone.conf version"]
+COPY docker-entrypoint.sh /
+ENTRYPOINT [ "sh", "/docker-entrypoint.sh" ]
+
