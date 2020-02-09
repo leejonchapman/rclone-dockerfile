@@ -11,12 +11,12 @@ docker build --build-arg VERSION=v1.50.0 --build-arg ARCH=amd64 -t rclonesync .
 ``
 
 ## Docker Run
-docker run -d -v data:/data -v config:/config rclonesync:latest
+docker run -v /root/rclone-dockerfile/config/:/config -v /usr/mnt:/media rclonesync:latest
 - ## Volume Data 
-tbc
+Mount whatever
  
 - ## Volume Config 
 See rclone.config.example for example of what is required
 ``
 ```
-cp config/rclone.config.example config/rclone.config
+cp config/rclone.conf.example config/rclone.conf
