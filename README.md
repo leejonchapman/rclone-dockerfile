@@ -9,7 +9,7 @@ chmod a+x docker-entrypoint.sh
 ``
 docker build \
 --build-args VERSION=v1.50.0 \
--- build-args ARCH=amd64
+--build-args ARCH=amd64
 -t rclonesync \
 .
 ``
